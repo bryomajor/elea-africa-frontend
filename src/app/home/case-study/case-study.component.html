@@ -1,0 +1,18 @@
+<div class="container pt-5">
+    <h3 class="text-center mt-5 text-uppercase">Events Covered</h3>
+    <div class="row pb-5 pt-4">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" *ngFor='let event of events'>
+            <div class="hovereffect">
+                <img class="img-fluid" src="{{event.thumbnail}}" alt="">
+                <div class="overlay">
+                    <h2>{{event.title}}</h2>
+                    <a class="info" [routerLink]="['/event', event.id]" target="">View Event</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <ul *ngFor="let event of events">
+    <li (click)="eventClicked(event)">{{event.title}}</li>
+</ul> -->
