@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row mt-5 pt-5 mb-5">
+        <div class="col-md-6">
+            <h6 class="mt-5">{{ event.date|date }}</h6>
+            <h2 class="display-4 font-weight-bold">{{ event.title }}</h2>
+            <p class="font-weight-bold">
+                <i class="fa fa-map-marker" aria-hidden="true"></i> {{ event.location }}
+            </p>
+            <div class="">
+                <p>{{ event.description }}</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img src="{{ event.thumbnail }}" alt="" class="img-fluid">
+        </div>
+    </div>
+    <hr>
+</div>
+<div class="container-fluid">
+    <h3 class="text-center text-uppercase mt-5">Highlights</h3>
+    <div class="row mt-4">
+        <div class="col-md-3 px-0" *ngFor='let eventimage of event.eventimages'>
+            <a href="{{ eventimage.image }}" data-lightbox="event-image">
+                <img src="{{ eventimage.image }}" alt="" class="img-fluid" id="myImg">
+            </a>
+        </div>
+    </div>
+</div>

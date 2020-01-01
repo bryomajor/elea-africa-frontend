@@ -1,0 +1,7 @@
+/* Style the Image Used to Trigger the Modal */
+#myImg {
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #myImg:hover {opacity: 0.7;}
