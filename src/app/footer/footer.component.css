@@ -1,0 +1,11 @@
+.twitter-timeline {
+    height: 20px !important;
+}
+
+.white-text {
+    color: #000;
+}
+
+.white-text:hover {
+    color: #fff;
+}
