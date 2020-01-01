@@ -1,3 +1,4 @@
+import { Contact } from './contact-class/contact';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -14,6 +15,19 @@ export class ApiService {
 
   getAllEvents(): Observable<any> {
     return this.http.get(this.baseurl + '/events/', 
-    {headers: this.httpHeaders})
+    {headers: this.httpHeaders});
   }
+
+  getEventById(id: any){
+    return this.http.get(this.baseurl + '/events/' + id + '/', 
+    {headers: this.httpHeaders});
+  }
+
+  save(contact: Contact): Observable<Contact>{
+    return this.http.post<Contact>('http://127.0.0.1:8000/contact/{id}', contact, {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    })
+  } 
 }
