@@ -1,3 +1,4 @@
+import { AboutComponent } from './about/about.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { IndexComponent } from './home/index/index.component';
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: '', redirectTo: "/home", pathMatch: "full" },
   { path: 'event/:id', component: EventDetailComponent},
   { path: 'contact', component: ContactComponent },
+  { path: 'about-us', component: AboutComponent},
   { path: '**', component: NotFoundComponent}
 ];
 
