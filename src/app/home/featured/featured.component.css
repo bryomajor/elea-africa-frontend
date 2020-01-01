@@ -1,0 +1,12 @@
+.masthead {
+    height: 50vh;
+    min-height: 500px;
+    background-image: url('https://octa-digital.co/wp-content/uploads/2017/10/web-design-2018.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container-fluid {
+    background-color: rgba(128, 0, 128, 0.7);
+}
