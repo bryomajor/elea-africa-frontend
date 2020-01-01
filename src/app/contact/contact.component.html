@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row pt-5">
+        <div class="col-md-6 offset-md-3 mb-5">
+            <span class="anchor" id="formContact"></span>
+            <!-- form user info -->
+            <div class="card card-outline-secondary mt-5">
+                <div class="card-header">
+                    <h3 class="mb-0">Contact Us</h3>
+                </div>
+                <div class="card-body">
+                    <form class="form" role="form" #contactForm = "ngForm" (ngSubmit)="onSubmit(contactForm)">
+                        <fieldset>
+                            <label for="fullname" class="mb-0">Name</label>
+                            <div class="row mb-1">
+                                <div class="col-lg-12">
+                                    <input type="text" name="fullname" id="fullname" class="form-control" required=""
+                                        ngModel>
+                                </div>
+                            </div>
+                            <label for="useremail" class="mb-0">Email</label>
+                            <div class="row mb-1">
+                                <div class="col-lg-12">
+                                    <input type="text" name="useremail" id="useremail" class="form-control" required=""
+                                        ngModel>
+                                </div>
+                            </div>
+                            <label for="usermessage" class="mb-0">Message</label>
+                            <div class="row mb-1">
+                                <div class="col-lg-12">
+                                    <textarea rows="6" name="usermessage" id="usermessage" class="form-control" required=""
+                                        ngModel></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-secondary btn-lg float-right">Send Message</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <!-- /form user info -->
+
+        </div>
+    </div>
+</div>
