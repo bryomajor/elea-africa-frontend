@@ -18,6 +18,7 @@ import { IndexComponent } from './home/index/index.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { EventDetailComponent } from './event-detail/event-detail.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     IndexComponent,
     NotFoundComponent,
     EventDetailComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
