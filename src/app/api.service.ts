@@ -30,4 +30,12 @@ export class ApiService {
       })
     })
   } 
+
+  submitSubscription(subscriptionData: any): Observable<any>{
+    return this.http.post<any>('http://127.0.0.1:8000/subscribe/', subscriptionData, {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    })
+  } 
 }
