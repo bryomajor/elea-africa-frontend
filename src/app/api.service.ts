@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
 
-  baseurl = "http://127.0.0.1:8000";
+  baseurl = "https://elea-africa-backend.herokuapp.com";
   httpHeaders = new HttpHeaders({'Content-type': 'application/json'})
 
   constructor(private http: HttpClient) { }
@@ -24,7 +24,7 @@ export class ApiService {
   }
 
   save(contact: Contact): Observable<Contact>{
-    return this.http.post<Contact>('http://127.0.0.1:8000/contact/{id}', contact, {
+    return this.http.post<Contact>('https://elea-africa-backend.herokuapp.com/contact/{id}', contact, {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
       })
@@ -32,7 +32,7 @@ export class ApiService {
   } 
 
   submitSubscription(subscriptionData: any): Observable<any>{
-    return this.http.post<any>('http://127.0.0.1:8000/subscribe/', subscriptionData, {
+    return this.http.post<any>('https://elea-africa-backend.herokuapp.com/subscribe/', subscriptionData, {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
       })
