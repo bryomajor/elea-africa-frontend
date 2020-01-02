@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +19,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { EventDetailComponent } from './event-detail/event-detail.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AboutComponent } from './about/about.component';
+import { ServicesComponent } from './services/services.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -34,6 +37,7 @@ import { AboutComponent } from './about/about.component';
     NotFoundComponent,
     EventDetailComponent,
     AboutComponent,
+    ServicesComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,7 +45,10 @@ import { AboutComponent } from './about/about.component';
     HttpClientModule,
     AngularFontAwesomeModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
