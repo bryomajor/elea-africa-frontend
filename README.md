@@ -1,6 +1,13 @@
-# Crud
+# Front-End
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.4.
+This is the Elea Africa front-end. The project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.4.
+
+
+## Cloning
+* In your terminal:
+        
+        $ git clone https://github.com/bryomajor/elea-africa.git
+        $ cd elea-africa/crud
 
 ## Development server
 
