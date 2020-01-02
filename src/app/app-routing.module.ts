@@ -1,3 +1,4 @@
+import { ServicesComponent } from './services/services.component';
 import { AboutComponent } from './about/about.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'event/:id', component: EventDetailComponent},
   { path: 'contact', component: ContactComponent },
   { path: 'about-us', component: AboutComponent},
+  { path: 'services', component: ServicesComponent},
   { path: '**', component: NotFoundComponent}
 ];
 
