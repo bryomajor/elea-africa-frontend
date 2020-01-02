@@ -63,12 +63,17 @@
         <!-- Links -->
         <h6 class="text-uppercase font-weight-bold">Be On the loop</h6>
         <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-        <div class="input-group">
-          <input type="email" class="form-control" placeholder="Enter your email">
+        <form class="input-group" (ngSubmit)="onSubscribe()"  [formGroup]="formSiteFormGroup">
+          <mat-form-field class="wide">
+            <input matInput type="email" class="form-control" placeholder="Enter your email" formControlName="email" style="border: solid 1px #000;">
+            <mat-error *ngIf="formSiteFormGroup.get('email').hasError('required')">
+              email is required
+            </mat-error>
+          </mat-form-field>
           <span class="input-group-btn">
-            <button class="btn btn-warning" type="submit">Subscribe</button>
+            <button class="btn btn-warning" type="submit" id="btn">Subscribe</button>
           </span>
-        </div>
+        </form>
 
       </div>
       <!-- Grid column -->
