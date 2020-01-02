@@ -9,3 +9,11 @@
 .white-text:hover {
     color: #fff;
 }
+
+mat-form-field.wide {
+    width: 60%;
+}
+
+button#btn {
+    margin-top: 20%;
+}
