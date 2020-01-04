@@ -2,33 +2,56 @@
     <div class="row pt-5">
         <div class="col-md-6 offset-md-3 mb-5">
             <span class="anchor" id="formContact"></span>
+            <div *ngIf="fullname.invalid && (fullname.dirty || fullname.touched)" class="alert alert-danger">
+                <div *ngIf="fullname.errors.required">
+                    Name is required.
+                </div>
+                <div *ngIf="fullname.errors.minlength">
+                    Name must be at least 2 characters long.
+                </div>
+            </div>
+            <div *ngIf="useremail.invalid && (useremail.dirty || useremail.touched)" class="alert alert-danger">
+                <div *ngIf="useremail.errors.required">
+                    Email is required.
+                </div>
+            </div>
+            <div *ngIf="usermessage.invalid && (usermessage.dirty || usermessage.touched)" class="alert alert-danger">
+                <div *ngIf="usermessage.errors.required">
+                    Message is required.
+                </div>
+            </div>
             <!-- form user info -->
             <div class="card card-outline-secondary mt-5">
                 <div class="card-header">
                     <h3 class="mb-0">Contact Us</h3>
                 </div>
                 <div class="card-body">
-                    <form class="form" role="form" #contactForm = "ngForm" (ngSubmit)="onSubmit(contactForm)">
+                    <form class="form" role="form" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+                        <div class="row" *ngIf="showMsg">
+                            <div class="col-xs-12">
+                                <p class="alert alert-success">Your message has been sent successfully!</p>
+                            </div>
+                        </div>
                         <fieldset>
                             <label for="fullname" class="mb-0">Name</label>
                             <div class="row mb-1">
                                 <div class="col-lg-12">
-                                    <input type="text" name="fullname" id="fullname" class="form-control" required=""
-                                        ngModel>
+                                    <input type="text" name="fullname" id="fullname" class="form-control" required
+                                        maxlength="30" minlength="2" ngModel #fullname="ngModel">
                                 </div>
                             </div>
                             <label for="useremail" class="mb-0">Email</label>
                             <div class="row mb-1">
                                 <div class="col-lg-12">
-                                    <input type="text" name="useremail" id="useremail" class="form-control" required=""
-                                        ngModel>
+                                    <input type="email" name="useremail" id="useremail" class="form-control" required
+                                        ngModel #useremail="ngModel">
                                 </div>
                             </div>
                             <label for="usermessage" class="mb-0">Message</label>
                             <div class="row mb-1">
                                 <div class="col-lg-12">
-                                    <textarea rows="6" name="usermessage" id="usermessage" class="form-control" required=""
-                                        ngModel></textarea>
+                                    <textarea rows="6" name="usermessage" id="usermessage" class="form-control" required
+                                        ngModel #usermessage="ngModel"></textarea>
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-secondary btn-lg float-right">Send Message</button>
