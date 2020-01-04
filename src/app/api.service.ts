@@ -1,3 +1,4 @@
+import { Subscription } from './subscription/subscription';
 import { Contact } from './contact-class/contact';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -24,15 +25,15 @@ export class ApiService {
   }
 
   save(contact: Contact): Observable<Contact>{
-    return this.http.post<Contact>('https://elea-africa-backend.herokuapp.com/contact/{id}', contact, {
+    return this.http.post<Contact>('https://elea-africa-backend.herokuapp.com/contact/', contact, {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
       })
     })
   } 
 
-  submitSubscription(subscriptionData: any): Observable<any>{
-    return this.http.post<any>('https://elea-africa-backend.herokuapp.com/subscribe/', subscriptionData, {
+  submitSubscription(subscriptionData: Subscription): Observable<Subscription>{
+    return this.http.post<Subscription>('https://elea-africa-backend.herokuapp.com/subscribe/', subscriptionData, {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
       })
